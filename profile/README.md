@@ -1,4 +1,4 @@
-## Oregon State Capstone 011: Enhancing Localized Deformation Analysis with AI/ML
+## Oregon State University EECS Capstone 011: Enhancing Localized Deformation Analysis with AI/ML
 
 <!--
 
