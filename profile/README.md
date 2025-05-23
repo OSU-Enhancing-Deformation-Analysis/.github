@@ -10,7 +10,7 @@ Digital Image Correlation (DIC) is a widely used tool for analyzing material def
 
 ## Project Structure
 
-### [Motion Vector Prediction Model](https://github.com/OSU-Enhancing-Deformation-Analysis/CNN-motion-model)
+### [Motion Vector Prediction Model](https://github.com/OSU-Enhancing-Deformation-Analysis/ML-Model)
 
 This is the core machine learning model training setup for our project. This model predicts 2D motion vector fields between two input images. The primary goal is to learn the transformation that maps an initial image to a subsequent image. This is achieved by training a U-Net-like convolutional neural network with self-attention mechanisms. A key feature of this project is its sophisticated synthetic data generation pipeline, which generates diverse training samples by programmatically creating and combining vector fields, and using various geometric and procedural shapes to mask these fields.
 
