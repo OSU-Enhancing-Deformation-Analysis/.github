@@ -41,7 +41,7 @@ produces an annotated quiver plot, with adjustable arrow spacing and scale.
 
 -->
 
-### [Image Processing and Strain Analysis Project](https://github.com/OSU-Enhancing-Deformation-Analysis/Model-Output-Preview)
+### [Model Output Preview](https://github.com/OSU-Enhancing-Deformation-Analysis/Model-Output-Preview)
 
 This project provides a small interface to test our machine learning models while we train them. This standalone interface allows us to visualize image sequences, motion vectors, and strain fields together in a clean, structured layout. This tool simplifies result inspection and enables researchers to compare raw inputs, machine-predicted motion, and derived strain in one place.
 
