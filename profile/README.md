@@ -1,6 +1,6 @@
 # Enhancing Localized Deformation Analysis with AI/ML
 
-*Oregon State University EECS Capstone 011*
+*Oregon State University EECS Capstone 011, 2025*
 
 Welcome to GitHub for our Capstone project, where we are using machine learning techniques to measure strain in materials. This space hosts multiple repositories that together comprise a comprehensive pipeline for analyzing microscopic material deformations from Scanning Electron Microscopy images.
 
