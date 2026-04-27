@@ -79,18 +79,14 @@ This project addresses the challenge of bridging multiple parts of the deformati
 What makes this work notable is that it turns a low level command path into a more usable control layer. Instead of only exposing terminal driven interactions, the project now demonstrates a graphical interface that can load the Deben DLL, establish the software side connection, validate user commands against safe ranges, and record system responses. That makes the Deban API easier to demonstrate, easier to reason about, and more practical as a bridge between ML output and the Deben Microtest control environment. The broader organization also shows that this project lives inside a larger ecosystem of UI, ML, and analysis repositories, which makes the integration role especially important.
 
 Its features include:
-Graphical control panel for a hardware facing workflow
-Users can interact with the system through a GUI rather than only through a command line. The interface exposes important controls such as DLL loading, connection status, manual load entry, emergency stop, and an event log, making the workflow much easier to understand and present.
-Safer command handling before execution
-The application checks load values before they are sent onward. For example, unsafe requests such as 1000 N are rejected by the interface rather than forwarded into the control path. This gives users a clearer and safer interaction model.
-Visible system feedback during operation
-The interface reports useful state information such as whether the DLL loaded successfully, whether the software side connection was established, and whether a valid force reading is currently available. This is more informative than a silent failure or plain terminal output.
-Runtime event logging for transparency
-User actions and system responses are recorded in the GUI log, including initialization, DLL load attempts, connection attempts, rejected unsafe commands, accepted commands, and emergency stop requests. This makes the system easier to debug and easier to demonstrate.
-A clearer bridge between ML output and control software
-The repository defines the Deban API as a middleman between SEM and ML, handling transfer and preprocessing responsibilities between stages of the pipeline. The current GUI based prototype makes that bridging role easier to visualize and communicate.
 
-<img src="https://github.com/OSU-Enhancing-Deformation-Analysis/Deban-API/blob/main/png/DebenGUI.png" width="800" alt="An image of the Graphical User Interface of the Deben API.">
+- **Graphical control panel for a hardware facing workflow.** Users can interact with the system through a GUI rather than only through a command line. The interface exposes important controls such as DLL loading, connection status, manual load entry, emergency stop, and an event log, making the workflow much easier to understand and present.
+- **Safer command handling before execution.** The application checks load values before they are sent onward. For example, unsafe requests such as 1000 N are rejected by the interface rather than forwarded into the control path. This gives users a clearer and safer interaction model.
+- **Visible system feedback during operation.** The interface reports useful state information such as whether the DLL loaded successfully, whether the software side connection was established, and whether a valid force reading is currently available. This is more informative than a silent failure or plain terminal output.
+- **Runtime event logging for transparency.** User actions and system responses are recorded in the GUI log, including initialization, DLL load attempts, connection attempts, rejected unsafe commands, accepted commands, and emergency stop requests. This makes the system easier to debug and easier to demonstrate.
+- **A clearer bridge between ML output and control software.** The repository defines the Deban API as a middleman between SEM and ML, handling transfer and preprocessing responsibilities between stages of the pipeline. The current GUI based prototype makes that bridging role easier to visualize and communicate.
+
+<img src="https://raw.githubusercontent.com/OSU-Enhancing-Deformation-Analysis/Deban-API/main/png/DebenGUI.png" width="600" alt="An image of the Graphical User Interface of the Deben API.">
 Qt based Deban API control panel showing DLL loading, software side connection, safe load validation, manual command entry, emergency stop, and runtime event logging.
 
 ## Project Structure
