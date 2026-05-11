@@ -66,9 +66,9 @@ The team is moving from the original U-Net architecture (described in [Technical
 
 > Preliminary output from the RAFT model on a representative SEM crack image. The top row shows the reference and deformed input frames. Panel 3 is the DICe ground-truth displacement field (sparse, populated only where DICe correlation succeeded). Panel 4 is the RAFT-predicted displacement (dense, covering the full field). Panel 5 is the residual error between the two. The model captures the overall pattern of deformation, but residual error remains substantial across the field. Training is ongoing.
 
-![Ablation: training loss with and without D4 augmentation](https://raw.githubusercontent.com/OSU-Enhancing-Deformation-Analysis/dice-automation-tools/main/image/landing-page/ablation_compare.png)
+![Ablation: 200-epoch validation loss across three RAFT runs varying only the training dataset construction.](https://raw.githubusercontent.com/OSU-Enhancing-Deformation-Analysis/dice-automation-tools/main/image/landing-page/ablation_compare.png)
 
-> Validation loss over training, comparing two runs with identical model and hyperparameters, varying only the dataset. Without augmentation the model saturates relatively early. With D4 augmentation, validation loss continues to descend past where the un-augmented run plateaus and reaches a lower final value, demonstrating that augmentation prevents overfitting in addition to providing an absolute improvement.
+> Validation loss over training, comparing three runs with identical model and hyperparameters, varying only the training dataset. The originals-only run (A) saturates early. Adding D4 augmentation (B) prevents that saturation and continues descending past the plateau. Replacing random tile sampling with systematic full-coverage crops (C) compounds the gain, reaching a final validation loss 25.4% below A. Augmentation prevents overfitting, and complete spatial coverage of the reliable interior further improves generalization.
 
 ## Hardware Safety Wrapper
 
