@@ -70,6 +70,11 @@ The team is moving from the original U-Net architecture (described in [Technical
 
 > Validation loss over training, comparing three runs with identical model and hyperparameters, varying only the training dataset. The originals-only run (A) saturates early. Adding D4 augmentation (B) prevents that saturation and continues descending past the plateau. Replacing random tile sampling with systematic full-coverage crops (C) compounds the gain, reaching a final validation loss 25.4% below A. Augmentation prevents overfitting, and complete spatial coverage of the reliable interior further improves generalization.
 
+
+<img src="https://raw.githubusercontent.com/OSU-Enhancing-Deformation-Analysis/raft-training-pipeline/main/image/SEM.svg" width="800" alt="Final trained RAFT output: reference SEM frame, deformed frame, the DICe ground-truth displacement field, and the RAFT prediction, which closely matches the ground truth across the reliable interior." />
+
+> Final result from the best systematic-coverage checkpoint (Run C). The predicted field (right) reproduces the DICe ground truth (panel 3) across the reliable interior. Training scripts, inference code, and the trained checkpoint are archived in [`raft-training-pipeline`](https://github.com/OSU-Enhancing-Deformation-Analysis/raft-training-pipeline).
+
 ## Hardware Safety Wrapper
 
 The Deben safety wrapper sits between ML predictions and the vendor DLL, validating commands before they reach the hardware.
